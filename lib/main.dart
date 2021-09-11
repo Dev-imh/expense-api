@@ -1,4 +1,6 @@
+import 'package:expense/api/sheets/addlistdheets_api.dart';
 import 'package:expense/api/sheets/user_sheets_api.dart';
+import 'package:expense/page/add_list_sheets_page.dart';
 import 'package:expense/page/create_sheets_page.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +8,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await UserSheetsApi.init();
+
+  await AddListSheetsApi.init();
 
   runApp(MyApp());
 }
@@ -19,7 +23,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CreateSheetsPage(),
+      // home: CreateSheetsPage(),
+      home: AddListSheetsPage(),
     );
   }
 }

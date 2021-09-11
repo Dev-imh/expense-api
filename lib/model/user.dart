@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class UserFileds {
   static final String id = 'id';
   static final String name = 'name';
